@@ -1,0 +1,165 @@
+@import "../scss/variables/index.scss";
+@import "../scss/mixins/minxin.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 0 80px 0 83px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $drBg;
+  color: $whiteBg;
+  gap: 32px;
+  &__links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+  &__link {
+    &--home {
+      text-decoration: none;
+      color: $whiteBg;
+    }
+    &--blog {
+      text-decoration: none;
+      color: $whiteBg;
+    }
+    &--about {
+      text-decoration: none;
+      color: $whiteBg;
+    }
+    &--contact {
+      text-decoration: none;
+      color: $whiteBg;
+    }
+  }
+  &__subcribe {
+    padding: 16px 48px;
+    border: 0;
+    outline: 0;
+    background-color: $yellowBg;
+    color: $whiteBg;
+  }
+}
+.home {
+  width: 100%;
+  height: 720px;
+  padding: 128px 80px 0 80px;
+  box-sizing: border-box;
+  background: radial-gradient(
+    30.56% 76.04% at 74.58% 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  &__content {
+    width: 804px;
+    height: 400px;
+    &--title {
+      @include font(900, 16px, 20px, $whiteBg);
+    }
+    &--highlight {
+      @include font(700, 56px, 64px, $whiteBg);
+      margin-top: 24px;
+    }
+    &--date {
+      @include font(400, 16px, 28px, $lightGray);
+      margin-top: 24px;
+    }
+    &--detail {
+      @include font(400, 16px, 28px, $lightGray);
+      margin-top: 16px;
+    }
+    &--readMore {
+      @include button(16px, 48px, 16px, 48px, $yellowBg);
+      margin-top: 48px;
+    }
+  }
+}
+.post {
+  width: 100%;
+  height: 804px;
+  margin-top: 130px;
+  padding: 0px 78px 0 80px;
+  box-sizing: border-box;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: wheat;
+    gap: 322px;
+    &--featurePost {
+      @include font(700, 36px, 48px, black);
+    }
+    &--allPost {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      @include font(700, 36px, 48px, black);
+    }
+    &--view {
+      @include font(400, 16px, 28px, black);
+    }
+  }
+  &__body {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__section {
+    width: 733px;
+    height: 724px;
+    border: 1px solid $lightGray;
+    &--wraper {
+      width: 100%;
+      height: 100%;
+      padding: 32px;
+      box-sizing: border-box;
+    }
+    &--image {
+      width: 669px;
+      height: 352px;
+    }
+    &--date {
+      margin-top: 32px;
+      @include font(500, 18px, 20px, black);
+    }
+    &--highlight {
+      margin-top: 16px;
+      @include font(700, 28px, 40px, black);
+    }
+    &--describe {
+      margin-top: 16px;
+      @include font(400, 18px, 28px, $mediumGray);
+    }
+    &--button {
+      margin-top: 32px;
+      @include button(16px, 48px, 16px, 48px, $yellowBg);
+    }
+  }
+  &__sidbar {
+    width: 517px;
+    height: 724px;
+    &--content {
+      width: 517pxpx;
+      height: 181px;
+      padding: 32px 116px 32px 32px;
+      box-sizing: border-box;
+    }
+    &--date {
+      @include font(500, 14px, 20px, black);
+    }
+    &--describe {
+      font-style: normal;
+      @include font(700, 24px, 32px, black);
+    }
+  }
+}

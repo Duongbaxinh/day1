@@ -1,0 +1,12 @@
+@mixin font($weight,$size,$linehight,$color) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $linehight;
+    color: $color;
+}
+@mixin button($top,$right,$bottom,$left,$color) {
+    padding: $top $right $bottom $left;
+    background-color: $color;
+    border: 0;
+    outline: none;
+}
